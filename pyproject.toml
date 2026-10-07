@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "time-direction-mcp"
+version = "0.3.2"
+authors = [{name = "GEsoFo"}]
+description = "Source-bound Liuren/Qimen election facts and location-neutral Big Dipper astronomy over MCP"
+requires-python = ">=3.11"
+dependencies = ["lunar-python==1.4.8", "skyfield==1.54", "tzdata>=2025.2"]
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+readme = "README.md"
+
+[project.urls]
+Homepage = "https://github.com/GEsoFo/time-direction-plugin"
+Repository = "https://github.com/GEsoFo/time-direction-plugin"
+Issues = "https://github.com/GEsoFo/time-direction-plugin/issues"
+
+[project.scripts]
+time-direction-mcp = "time_direction_mcp.server:main"
+time-direction-preview = "time_direction_mcp.preview:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+time_direction_mcp = ["resources/calendar/assets/*.html", "resources/calendar/assets/*.mjs", "resources/calendar/scripts/*.py", "resources/calendar/scripts/*.mjs", "resources/calendar/scripts/requirements.txt", "resources/calendar/references/*.md", "resources/calendar/references/sources/*.txt", "resources/plugin/*.json", "resources/plugin/.mcp.json", "resources/plugin/.codex-plugin/*.json", "resources/plugin/skills/time-direction-election/*.md", "resources/plugin/skills/time-direction-election/agents/*.yaml", "resources/plugin/skills/time-direction-election/references/*.md"]
+
+[tool.setuptools.exclude-package-data]
+"*" = ["**/__pycache__/*", "**/*.pyc", "**/*.pyo"]

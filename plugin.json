@@ -1,0 +1,31 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "time-direction",
+  "version": "0.3.2",
+  "description": "六壬与奇门择时、联合方位及全年日历；MCP计算事实，Skill指导模型按事项裁决。",
+  "license": "MIT",
+  "keywords": [
+    "liuren",
+    "qimen",
+    "calendar",
+    "election",
+    "astronomy"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "择时与方位",
+        "shortDescription": "六壬奇门联合择日，支持全年、多本命和真实北斗方位",
+        "longDescription": "按事项比较六壬、奇门、神煞与多本命，由模型择时择方并回填离线日历。",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "defaultPrompt": [
+          "为指定年份的事项择日，并选择合适方位。"
+        ]
+      }
+    }
+  }
+}

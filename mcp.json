@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "time-direction": {
+      "type": "stdio",
+      "command": "time-direction-mcp",
+      "args": []
+    }
+  }
+}
