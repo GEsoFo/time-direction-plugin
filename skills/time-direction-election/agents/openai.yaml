@@ -1,0 +1,12 @@
+interface:
+  display_name: "择时与方位"
+  short_description: "按事项、多本命和用方要求综合六壬奇门择时，支持整年比较与日历回填"
+  default_prompt: "使用 $time-direction-election 为指定年份和事项择日，并选择合适方位。"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "time-direction"
+      description: "配套固定历法、六壬奇门、北斗坐标和日历回填工具"
+      transport: "stdio"
+policy:
+  allow_implicit_invocation: true
