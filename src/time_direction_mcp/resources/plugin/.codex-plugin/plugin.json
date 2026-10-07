@@ -1,0 +1,7 @@
+{
+  "name": "time-direction",
+  "version": "0.3.2",
+  "description": "六壬与奇门择时、联合方位及全年日历；MCP计算事实，Skill指导模型按事项裁决。",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
